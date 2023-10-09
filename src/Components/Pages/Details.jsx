@@ -1,17 +1,25 @@
-
+import { useEffect, useState } from "react";
+import OneDetailsCard from "../DetailsCard/OneDetailsCard";
+import { useLoaderData, useParams } from "react-router-dom";
 
 const Details = () => {
-    return (
-        <div>
 
-          <ul>
-            <li>item1</li>
-            <li>item2</li>
-            <li>item3</li>
-            <li>item4</li>
-            <li>item5</li>
-          </ul>
-            
+  const [card, setCard] = useState({})
+    const { id } = useParams()
+    const sixCard = useLoaderData()
+
+    useEffect(() => {
+        const FindCard = sixCard?.find(card => card.id == id)
+        setCard(FindCard)
+
+    }, [id, sixCard])
+
+    console.log(card)
+
+    return (
+        <div className=" mx-auto w-11/12 "> 
+    <OneDetailsCard card ={card}></OneDetailsCard>
+
         </div>
     );
 };

@@ -5,6 +5,7 @@ import toast, { Toaster } from "react-hot-toast";
 import { FcGoogle } from "react-icons/fc";
 
 
+
 const Register = () => {
 
     const { googlePopUp } = useContext(AuthContext);
