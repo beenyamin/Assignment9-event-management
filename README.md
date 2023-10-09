@@ -89,7 +89,7 @@
                but when called without any arguments, name is undefined.
 
 
-                 ===>    Question Number - 4 <===
+                 ===>    Question Number - 5 <===
 
                          
                         let count = 0;
@@ -105,7 +105,7 @@
                             C: 3
                             D: 4
 
-                      (Answer) ==> B: 2 
+                      (Answer) ==> B: 3 
 
 
                         Here is the Explanation

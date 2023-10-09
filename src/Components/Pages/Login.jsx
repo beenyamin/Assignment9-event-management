@@ -29,10 +29,15 @@ const Login = () => {
             return;
 
         }
-        else if (!/[A-Z]/.test(password)) {
+        else if (!/(?=.*[A-Z])(?=.*[_.!@$*=-?#])/.test(password)) {
             toast.error(" Your password should have  at Least one Capital letter! ")
             return
         }
+
+       
+
+
+
 
         loginUser(email, password)
             .then(result => {
