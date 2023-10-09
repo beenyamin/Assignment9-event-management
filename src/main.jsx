@@ -26,7 +26,9 @@ const router = createBrowserRouter([
        {
 
         path:"/",
-        element:<Home></Home>
+        element:<Home></Home>,
+        loader:() => fetch ('/Wedding.json')
+
 
 
        },
@@ -45,7 +47,7 @@ const router = createBrowserRouter([
        {
 
         path:"/contact",
-        element:<Contact></Contact>
+        element: <PrivateRoute><Contact></Contact></PrivateRoute>
 
        },
        {
